@@ -169,9 +169,9 @@
 
 
 
-            axios.default.post("http://localhost:8080/summarize/",data).then((resp)=>{
+            axios.default.post("https://my-science-api.herokuapp.com/summarize/",data).then((resp)=>{
                 window.sessionStorage.setItem("resp1", JSON.stringify(resp.data));
-                axios.default.post("http://localhost:8080/dalle/",data).then((resp)=>{
+                axios.default.post("https://my-science-api.herokuapp.com/dalle/",data).then((resp)=>{
                      window.sessionStorage.setItem("resp2", resp.data);
                      window.location.href="result.html"
 
